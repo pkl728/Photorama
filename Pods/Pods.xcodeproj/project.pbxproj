@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		061FD200A225CC59A8903FED3B946F47 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD1C1935A68072D9B420D7EF0F82EF4 /* JSONParser.swift */; };
+		08685589149247C15A670AA30D75A3DF /* Freddy-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DCAA5BB7F6C95975DB80649776F6B5D4 /* Freddy-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		478AD6020403A9E6C369090E27B90C00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		4C1780422B26917E68C93A01ED6F91F3 /* JSONEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F3CCE7D5979DACBED03C5BAB6BE5CE /* JSONEncodable.swift */; };
+		6458EDA5D4D6216ECD8EBFFD9913AADD /* JSONEncodingDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30DBC308B8E626B5BBC97B4A696C0B1 /* JSONEncodingDetector.swift */; };
+		71B12CC4BAD17D16C8142F7B77B9E651 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		77CFAF8A0AFF897FC18FFD6A22DDFB48 /* JSONParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0588158B5BE23E2943E48296F3ACD0A1 /* JSONParsing.swift */; };
+		7CACD26183580E0029EC5C1424C40BE8 /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB7ED5398F59AE459A3BC5ABDBBD1 /* JSONDecodable.swift */; };
+		7CC2B313467D42EC6CE21B8E0CDC5615 /* JSONLiteralConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EC6A4098A6FC950B151BC3C004D653 /* JSONLiteralConvertible.swift */; };
+		7F7788F8514C39C47B298474891321F0 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E599C2C4C24749264434FD451761B1 /* JSON.swift */; };
+		A95081FA9545A1E655DA9D08B80FBFBF /* Pods-Photorama-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 985528CCD34A1E7F21609EBDBD08265E /* Pods-Photorama-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD9867ED903DCDE6AB2965E00DFB2457 /* Freddy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFCE66E9B86C356C91961B8F3FBF020 /* Freddy-dummy.m */; };
+		C1FD33CA830FDCBCA0CBF851A8A81C6F /* Pods-Photorama-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AEF6C0AD28AC85BB7591DD6B77FC04 /* Pods-Photorama-dummy.m */; };
+		F52EF5C874F4C0C0CE623081FC8EEE4C /* JSONSubscripting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9949FCE9758992C1A55A2F3885B24189 /* JSONSubscripting.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC8B2C8078283CDB0F8167A9BB1B4879 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE9FE67AC40EE5B7DE1003B43536DBE3;
+			remoteInfo = Freddy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0240DB633AD334E49B4C57306BAAE785 /* Pods-Photorama.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Photorama.modulemap"; sourceTree = "<group>"; };
+		0588158B5BE23E2943E48296F3ACD0A1 /* JSONParsing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONParsing.swift; path = Sources/JSONParsing.swift; sourceTree = "<group>"; };
+		0B2C3B1798CE3123311FA2CD3C6139DC /* Pods-Photorama-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Photorama-frameworks.sh"; sourceTree = "<group>"; };
+		29EC6A4098A6FC950B151BC3C004D653 /* JSONLiteralConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONLiteralConvertible.swift; path = Sources/JSONLiteralConvertible.swift; sourceTree = "<group>"; };
+		2AD1C1935A68072D9B420D7EF0F82EF4 /* JSONParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONParser.swift; path = Sources/JSONParser.swift; sourceTree = "<group>"; };
+		2DB09F1E02D219F0F154635BF883CDD4 /* Pods-Photorama-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Photorama-resources.sh"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		41F3CCE7D5979DACBED03C5BAB6BE5CE /* JSONEncodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONEncodable.swift; path = Sources/JSONEncodable.swift; sourceTree = "<group>"; };
+		4BFCE66E9B86C356C91961B8F3FBF020 /* Freddy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Freddy-dummy.m"; sourceTree = "<group>"; };
+		52234305AB0883F77817AE524A7126B3 /* Pods-Photorama-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Photorama-acknowledgements.plist"; sourceTree = "<group>"; };
+		61634A1527D67D8978832FCACBD41684 /* Pods-Photorama.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Photorama.debug.xcconfig"; sourceTree = "<group>"; };
+		6B8BE1EE8021DF051E09C987C910C9C2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76901CCA9E8315443390CE6972FDCDC7 /* Freddy-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Freddy-prefix.pch"; sourceTree = "<group>"; };
+		78E599C2C4C24749264434FD451761B1 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = Sources/JSON.swift; sourceTree = "<group>"; };
+		86CD32DA20157E08BA8233FC7A779EB6 /* Freddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Freddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CDFB7ED5398F59AE459A3BC5ABDBBD1 /* JSONDecodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONDecodable.swift; path = Sources/JSONDecodable.swift; sourceTree = "<group>"; };
+		985528CCD34A1E7F21609EBDBD08265E /* Pods-Photorama-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Photorama-umbrella.h"; sourceTree = "<group>"; };
+		9949FCE9758992C1A55A2F3885B24189 /* JSONSubscripting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONSubscripting.swift; path = Sources/JSONSubscripting.swift; sourceTree = "<group>"; };
+		A10B56B49C45B5A7AD82DE80452D6BDC /* Pods-Photorama-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Photorama-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AA4D53E04E2E320AC8AA13A2E5700757 /* Pods_Photorama.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Photorama.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30DBC308B8E626B5BBC97B4A696C0B1 /* JSONEncodingDetector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONEncodingDetector.swift; path = Sources/JSONEncodingDetector.swift; sourceTree = "<group>"; };
+		B8CE637526531B8BB7B6BF1FA5D2F09B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D3EF7BA4EAD748F42EDF9C4853601A13 /* Freddy.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Freddy.xcconfig; sourceTree = "<group>"; };
+		DCAA5BB7F6C95975DB80649776F6B5D4 /* Freddy-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Freddy-umbrella.h"; sourceTree = "<group>"; };
+		F1AEF6C0AD28AC85BB7591DD6B77FC04 /* Pods-Photorama-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Photorama-dummy.m"; sourceTree = "<group>"; };
+		F727B12F65DDEF29746FFA6A74F913B2 /* Pods-Photorama.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Photorama.release.xcconfig"; sourceTree = "<group>"; };
+		FB33A95B7B66A3F27AA46972D78CA6D2 /* Freddy.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Freddy.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6408B1A694E68879AAE923CFBE739A45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				478AD6020403A9E6C369090E27B90C00 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78861905CD3FA4C571C741232D58691F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71B12CC4BAD17D16C8142F7B77B9E651 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A382EEF0CC544BE6F04B27A8EB0BF31 /* Freddy */ = {
+			isa = PBXGroup;
+			children = (
+				78E599C2C4C24749264434FD451761B1 /* JSON.swift */,
+				8CDFB7ED5398F59AE459A3BC5ABDBBD1 /* JSONDecodable.swift */,
+				41F3CCE7D5979DACBED03C5BAB6BE5CE /* JSONEncodable.swift */,
+				B30DBC308B8E626B5BBC97B4A696C0B1 /* JSONEncodingDetector.swift */,
+				29EC6A4098A6FC950B151BC3C004D653 /* JSONLiteralConvertible.swift */,
+				2AD1C1935A68072D9B420D7EF0F82EF4 /* JSONParser.swift */,
+				0588158B5BE23E2943E48296F3ACD0A1 /* JSONParsing.swift */,
+				9949FCE9758992C1A55A2F3885B24189 /* JSONSubscripting.swift */,
+				4E3F20844B8B4F36756BA56668CA4CAE /* Support Files */,
+			);
+			path = Freddy;
+			sourceTree = "<group>";
+		};
+		35506034411BC850114C0030E0563EEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A382EEF0CC544BE6F04B27A8EB0BF31 /* Freddy */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4E3F20844B8B4F36756BA56668CA4CAE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB33A95B7B66A3F27AA46972D78CA6D2 /* Freddy.modulemap */,
+				D3EF7BA4EAD748F42EDF9C4853601A13 /* Freddy.xcconfig */,
+				4BFCE66E9B86C356C91961B8F3FBF020 /* Freddy-dummy.m */,
+				76901CCA9E8315443390CE6972FDCDC7 /* Freddy-prefix.pch */,
+				DCAA5BB7F6C95975DB80649776F6B5D4 /* Freddy-umbrella.h */,
+				B8CE637526531B8BB7B6BF1FA5D2F09B /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Freddy";
+			sourceTree = "<group>";
+		};
+		62E472DD948CF975FC01EC85EA97AFD5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E9A64539EEF64D61C0B47CA0217FBAC /* Pods-Photorama */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				35506034411BC850114C0030E0563EEC /* Pods */,
+				A5DC98464E08538FD7AEE9CCCF0A27A2 /* Products */,
+				62E472DD948CF975FC01EC85EA97AFD5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8E9A64539EEF64D61C0B47CA0217FBAC /* Pods-Photorama */ = {
+			isa = PBXGroup;
+			children = (
+				6B8BE1EE8021DF051E09C987C910C9C2 /* Info.plist */,
+				0240DB633AD334E49B4C57306BAAE785 /* Pods-Photorama.modulemap */,
+				A10B56B49C45B5A7AD82DE80452D6BDC /* Pods-Photorama-acknowledgements.markdown */,
+				52234305AB0883F77817AE524A7126B3 /* Pods-Photorama-acknowledgements.plist */,
+				F1AEF6C0AD28AC85BB7591DD6B77FC04 /* Pods-Photorama-dummy.m */,
+				0B2C3B1798CE3123311FA2CD3C6139DC /* Pods-Photorama-frameworks.sh */,
+				2DB09F1E02D219F0F154635BF883CDD4 /* Pods-Photorama-resources.sh */,
+				985528CCD34A1E7F21609EBDBD08265E /* Pods-Photorama-umbrella.h */,
+				61634A1527D67D8978832FCACBD41684 /* Pods-Photorama.debug.xcconfig */,
+				F727B12F65DDEF29746FFA6A74F913B2 /* Pods-Photorama.release.xcconfig */,
+			);
+			name = "Pods-Photorama";
+			path = "Target Support Files/Pods-Photorama";
+			sourceTree = "<group>";
+		};
+		A5DC98464E08538FD7AEE9CCCF0A27A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86CD32DA20157E08BA8233FC7A779EB6 /* Freddy.framework */,
+				AA4D53E04E2E320AC8AA13A2E5700757 /* Pods_Photorama.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8B538CFD12371CB2B17C9CD6613430D8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A95081FA9545A1E655DA9D08B80FBFBF /* Pods-Photorama-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEBB3D7469AACECFCA712BDB2A2428B9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08685589149247C15A670AA30D75A3DF /* Freddy-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D634CCE7CFAA5BB29AC87CBB1E62344B /* Pods-Photorama */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99836D4D1C06F566C266872707E915EC /* Build configuration list for PBXNativeTarget "Pods-Photorama" */;
+			buildPhases = (
+				149584CDF0E299B429B13ECA66E90B60 /* Sources */,
+				6408B1A694E68879AAE923CFBE739A45 /* Frameworks */,
+				8B538CFD12371CB2B17C9CD6613430D8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				479497984D0178AD22FD95BC91C554A8 /* PBXTargetDependency */,
+			);
+			name = "Pods-Photorama";
+			productName = "Pods-Photorama";
+			productReference = AA4D53E04E2E320AC8AA13A2E5700757 /* Pods_Photorama.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DE9FE67AC40EE5B7DE1003B43536DBE3 /* Freddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF239B2193ED98D1316EB27F32BDF256 /* Build configuration list for PBXNativeTarget "Freddy" */;
+			buildPhases = (
+				3284FA28E7B36470EFBADC131FD55C78 /* Sources */,
+				78861905CD3FA4C571C741232D58691F /* Frameworks */,
+				FEBB3D7469AACECFCA712BDB2A2428B9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Freddy;
+			productName = Freddy;
+			productReference = 86CD32DA20157E08BA8233FC7A779EB6 /* Freddy.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = A5DC98464E08538FD7AEE9CCCF0A27A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE9FE67AC40EE5B7DE1003B43536DBE3 /* Freddy */,
+				D634CCE7CFAA5BB29AC87CBB1E62344B /* Pods-Photorama */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		149584CDF0E299B429B13ECA66E90B60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1FD33CA830FDCBCA0CBF851A8A81C6F /* Pods-Photorama-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3284FA28E7B36470EFBADC131FD55C78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD9867ED903DCDE6AB2965E00DFB2457 /* Freddy-dummy.m in Sources */,
+				7F7788F8514C39C47B298474891321F0 /* JSON.swift in Sources */,
+				7CACD26183580E0029EC5C1424C40BE8 /* JSONDecodable.swift in Sources */,
+				4C1780422B26917E68C93A01ED6F91F3 /* JSONEncodable.swift in Sources */,
+				6458EDA5D4D6216ECD8EBFFD9913AADD /* JSONEncodingDetector.swift in Sources */,
+				7CC2B313467D42EC6CE21B8E0CDC5615 /* JSONLiteralConvertible.swift in Sources */,
+				061FD200A225CC59A8903FED3B946F47 /* JSONParser.swift in Sources */,
+				77CFAF8A0AFF897FC18FFD6A22DDFB48 /* JSONParsing.swift in Sources */,
+				F52EF5C874F4C0C0CE623081FC8EEE4C /* JSONSubscripting.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		479497984D0178AD22FD95BC91C554A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Freddy;
+			target = DE9FE67AC40EE5B7DE1003B43536DBE3 /* Freddy */;
+			targetProxy = EC8B2C8078283CDB0F8167A9BB1B4879 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		182F2BE53B05D2946F60739464E580B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61634A1527D67D8978832FCACBD41684 /* Pods-Photorama.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Photorama/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Photorama/Pods-Photorama.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Photorama;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		30C02FF4FB670AE4880E41E7F76DC2CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3EF7BA4EAD748F42EDF9C4853601A13 /* Freddy.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Freddy/Freddy-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Freddy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Freddy/Freddy.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Freddy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		747A4C84FBBAE94DD7E7480B39A49584 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F727B12F65DDEF29746FFA6A74F913B2 /* Pods-Photorama.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Photorama/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Photorama/Pods-Photorama.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Photorama;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F02FD51399077CC864B1B42BD1CEAF2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3EF7BA4EAD748F42EDF9C4853601A13 /* Freddy.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Freddy/Freddy-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Freddy/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Freddy/Freddy.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Freddy;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99836D4D1C06F566C266872707E915EC /* Build configuration list for PBXNativeTarget "Pods-Photorama" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				182F2BE53B05D2946F60739464E580B5 /* Debug */,
+				747A4C84FBBAE94DD7E7480B39A49584 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF239B2193ED98D1316EB27F32BDF256 /* Build configuration list for PBXNativeTarget "Freddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30C02FF4FB670AE4880E41E7F76DC2CC /* Debug */,
+				F02FD51399077CC864B1B42BD1CEAF2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
