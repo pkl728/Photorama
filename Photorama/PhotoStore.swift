@@ -80,7 +80,6 @@ class PhotoStore {
                 return .Failure(PhotoError.ImageCreationError)
             }
         }
-        
         return .Success(image)
     }
 }
