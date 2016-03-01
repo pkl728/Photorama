@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B34D5C74DD44EDAB6D7F9390'
+               BlueprintIdentifier = '2E15180E81E17363D08B4CE2'
                BlueprintName = 'Pods-Photorama'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Photorama.framework'>
