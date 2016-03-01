@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Freddy
 import UIKit
 
 enum ImageResult {
@@ -49,24 +50,27 @@ class PhotoStore {
     
     func fetchImageForPhoto(photo: Photo, completion: (ImageResult) -> Void) {
         
-        let photoURL = photo.remoteURL
-        let request = NSURLRequest(URL: photoURL)
+        if let photoURL = photo.remoteURL {
+            
+            let request = NSURLRequest(URL: photoURL)
         
-        let task = session.dataTaskWithRequest(request) {
-            (data, response, error) -> Void in
+            let task = session.dataTaskWithRequest(request) {
+                (data, response, error) -> Void in
             
-            let result = self.processImageRequest(data: data, error: error)
+                let result = self.processImageRequest(data: data, error: error)
             
-            if case let .Success(image) = result {
-                photo.image = image
+                if case let .Success(image) = result {
+                    photo.image = image
+                }
+            
+                let httpResponse = response as? NSHTTPURLResponse
+                print("Status: \(httpResponse?.statusCode) Header fields: \(httpResponse?.allHeaderFields)")
+            
+                completion(result)
             }
             
-            let httpResponse = response as? NSHTTPURLResponse
-            print("Status: \(httpResponse?.statusCode) Header fields: \(httpResponse?.allHeaderFields)")
-            
-            completion(result)
+            task.resume()
         }
-        task.resume()
     }
     
     func processImageRequest(data data: NSData?, error: NSError?) -> ImageResult {

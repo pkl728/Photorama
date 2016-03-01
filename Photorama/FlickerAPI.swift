@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Freddy
 
 enum Method: String {
     case RecentPhotos = "flickr.photos.getRecent"
@@ -62,18 +63,17 @@ struct FlickerAPI {
         return components.URL!
     }
     
-    private static func photoFromJSONObject(json: [String : AnyObject]) -> Photo? {
+    private static func photoFromJSONObject(json: JSON) -> Photo? {
         
-        guard let photoID = json["id"] as? String,
-                    title = json["title"] as? String,
-                    dateString = json["datetaken"] as? String,
-                    photoURLString = json["url_h"] as? String,
-                    url = NSURL(string: photoURLString),
-            dateTaken = dateFormatter.dateFromString(dateString) else {
-                return nil
+        var photo: Photo? = nil
+        do {
+            photo = try Photo(json: json)
+        }
+        catch {
+            print("Problem creating Photo")
         }
         
-        return Photo(title: title, photoID: photoID, remoteURL: url, dateTaken: dateTaken)
+        return photo
     }
     
     static func recentPhotosURL() -> NSURL {
@@ -82,28 +82,17 @@ struct FlickerAPI {
     
     static func photosFromJSONData(data: NSData) -> PhotosResult {
         do {
-            let jsonObject: AnyObject = try NSJSONSerialization.JSONObjectWithData(data, options: [])
+            let jsonObject = try JSONParser.createJSONFromData(data)
             
-            guard let jsonDictionary = jsonObject as? [NSObject:AnyObject],
-                photos = jsonDictionary["photos"] as? [String:AnyObject],
-                photosArray = photos["photo"] as? [[String:AnyObject]] else {
-                    
-                    return .Failure(FlickrError.InvalidJSONData)
-            }
-            
-            var finalPhotos = [Photo]()
-            
-            for photoJSON in photosArray {
-                if let photo = photoFromJSONObject(photoJSON) {
-                    finalPhotos.append(photo)
-                }
-            }
-            
-            if finalPhotos.count == 0 && photosArray.count > 0 {
+            if jsonObject == nil {
                 return .Failure(FlickrError.InvalidJSONData)
             }
             
-            return .Success(finalPhotos)
+            guard let photosArray: [Photo] = try jsonObject.array("photos", "photo").map(Photo.init) else {
+                return .Failure(FlickrError.InvalidJSONData)
+            }
+            
+            return .Success(photosArray)
         }
         catch let error {
             return .Failure(error)
