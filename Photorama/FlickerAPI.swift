@@ -9,7 +9,7 @@
 import Foundation
 
 enum Method: String {
-    case RecentPhotos = "flicker.photos.getRecent"
+    case RecentPhotos = "flickr.photos.getRecent"
 }
 
 enum PhotosResult {
@@ -23,7 +23,7 @@ enum FlickrError: ErrorType {
 
 struct FlickerAPI {
     
-    private static let baseURLString = "https://api.flicker.com/services/rest"
+    private static let baseURLString = "https://api.flickr.com/services/rest"
     private static let APIKey = "a6d819499131071f158fd740860a5a88"
     
     private static let dateFormatter: NSDateFormatter = {
