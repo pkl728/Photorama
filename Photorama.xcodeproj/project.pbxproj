@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30B5D4031C863B5D0050C840 /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B5D4021C863B5D0050C840 /* PhotoDataSource.swift */; };
+		30B5D4051C872A170050C840 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B5D4041C872A170050C840 /* PhotoCollectionViewCell.swift */; };
+		30B5D4071C872FB20050C840 /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B5D4061C872FB20050C840 /* PhotoInfoViewController.swift */; };
 		30F8938D1C7CF75100DDD5CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8938C1C7CF75100DDD5CE /* AppDelegate.swift */; };
 		30F893921C7CF75100DDD5CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F893901C7CF75100DDD5CE /* Main.storyboard */; };
 		30F893941C7CF75100DDD5CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F893931C7CF75100DDD5CE /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 
 /* Begin PBXFileReference section */
 		0DA17838AB455C87C494B295 /* Pods-Photorama.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Photorama.release.xcconfig"; path = "Pods/Target Support Files/Pods-Photorama/Pods-Photorama.release.xcconfig"; sourceTree = "<group>"; };
+		30B5D4021C863B5D0050C840 /* PhotoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
+		30B5D4041C872A170050C840 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		30B5D4061C872FB20050C840 /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoInfoViewController.swift; sourceTree = "<group>"; };
 		30F893891C7CF75100DDD5CE /* Photorama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photorama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F8938C1C7CF75100DDD5CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30F893911C7CF75100DDD5CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +82,9 @@
 				30F893A01C7CF94800DDD5CE /* FlickerAPI.swift */,
 				30F893A21C7CFCD800DDD5CE /* PhotoStore.swift */,
 				30F893A41C7CFF5700DDD5CE /* Photo.swift */,
+				30B5D4021C863B5D0050C840 /* PhotoDataSource.swift */,
+				30B5D4041C872A170050C840 /* PhotoCollectionViewCell.swift */,
+				30B5D4061C872FB20050C840 /* PhotoInfoViewController.swift */,
 			);
 			path = Photorama;
 			sourceTree = "<group>";
@@ -222,6 +231,9 @@
 				30F8939F1C7CF77200DDD5CE /* PhotosViewController.swift in Sources */,
 				30F8938D1C7CF75100DDD5CE /* AppDelegate.swift in Sources */,
 				30F893A31C7CFCD800DDD5CE /* PhotoStore.swift in Sources */,
+				30B5D4031C863B5D0050C840 /* PhotoDataSource.swift in Sources */,
+				30B5D4051C872A170050C840 /* PhotoCollectionViewCell.swift in Sources */,
+				30B5D4071C872FB20050C840 /* PhotoInfoViewController.swift in Sources */,
 				30F893A11C7CF94800DDD5CE /* FlickerAPI.swift in Sources */,
 				30F893A51C7CFF5700DDD5CE /* Photo.swift in Sources */,
 			);
