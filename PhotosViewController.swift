@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotosViewController: UIViewController, UICollectionViewDelegate {
+class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -52,6 +52,10 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
         }
     }
     
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        collectionView.performBatchUpdates(nil, completion: nil)
+    }
+    
     func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
      
         let photo = photoDataSource.photos[indexPath.row]
@@ -68,5 +72,10 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
                 }
             }
         }
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        return CGSize(width: collectionView.frame.width / 4 - 8, height: collectionView.frame.width / 4 - 8)
     }
 }
