@@ -12,6 +12,18 @@ class PhotoInfoViewController: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var timesViewed: UILabel!
+    @IBOutlet var favoriteLabel: UILabel!
+    
+    @IBAction func favoritePicture(sender: AnyObject) {
+        if photo.favorite {
+            photo.favorite = false
+            favoriteLabel.hidden = true
+        }
+        else {
+            photo.favorite = true
+            favoriteLabel.hidden = false
+        }
+    }
     
     var photo: Photo! {
         didSet {
@@ -23,6 +35,8 @@ class PhotoInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        favoriteLabel.hidden = !photo.favorite
         
         let timesViewed = Float(photo.timesViewed) + 1
         photo.setValue(timesViewed, forKey: "timesViewed")
@@ -38,6 +52,16 @@ class PhotoInfoViewController: UIViewController {
             case let .Failure(error):
                 print("Error fetching image for photo: \(error)")
             }
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowTags" {
+            let navController = segue.destinationViewController as! UINavigationController
+            let tagController = navController.topViewController as! TagsViewController
+            
+            tagController.store = store
+            tagController.photo = photo
         }
     }
 }

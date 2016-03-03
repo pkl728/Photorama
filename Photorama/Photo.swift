@@ -15,12 +15,6 @@ class Photo: NSManagedObject {
 
     var image: UIImage?
     
-    private let dateFormatter: NSDateFormatter = {
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        return formatter
-    }()
-    
     override func awakeFromInsert() {
         title = ""
         photoID = ""
@@ -28,5 +22,16 @@ class Photo: NSManagedObject {
         photoKey = NSUUID().UUIDString
         dateTaken = NSDate()
         timesViewed = 0
+        favorite = false
+    }
+    
+    func addTagObject(tag: NSManagedObject) {
+        let currentTags = mutableSetValueForKey("tags")
+        currentTags.addObject(tag)
+    }
+    
+    func removeTagObject(tag: NSManagedObject) {
+        let currentTags = mutableSetValueForKey("tags")
+        currentTags.removeObject(tag)
     }
 }

@@ -20,6 +20,7 @@ extension Photo {
     @NSManaged var remoteURL: NSURL
     @NSManaged var dateTaken: NSDate
     @NSManaged var timesViewed: NSNumber
+    @NSManaged var favorite: Bool
     @NSManaged var tags: Set<NSManagedObject>
 
 }

@@ -15,6 +15,8 @@
 		30B5D4121C8764670050C840 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B5D4111C8764670050C840 /* CoreDataStack.swift */; };
 		30B5D4141C887B2A0050C840 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B5D4131C887B2A0050C840 /* ImageStore.swift */; };
 		30B5D4161C8882A10050C840 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B5D4151C8882A10050C840 /* Photo+CoreDataProperties.swift */; };
+		30B5D4181C88A3F30050C840 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B5D4171C88A3F30050C840 /* TagsViewController.swift */; };
+		30B5D41A1C88A4620050C840 /* TagDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B5D4191C88A4620050C840 /* TagDataSource.swift */; };
 		30F8938D1C7CF75100DDD5CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F8938C1C7CF75100DDD5CE /* AppDelegate.swift */; };
 		30F893921C7CF75100DDD5CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F893901C7CF75100DDD5CE /* Main.storyboard */; };
 		30F893941C7CF75100DDD5CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30F893931C7CF75100DDD5CE /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 		30B5D4111C8764670050C840 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		30B5D4131C887B2A0050C840 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		30B5D4151C8882A10050C840 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		30B5D4171C88A3F30050C840 /* TagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
+		30B5D4191C88A4620050C840 /* TagDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagDataSource.swift; sourceTree = "<group>"; };
 		30F893891C7CF75100DDD5CE /* Photorama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photorama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F8938C1C7CF75100DDD5CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30F893911C7CF75100DDD5CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 				30B5D40C1C8762F50050C840 /* Photo.swift */,
 				30B5D4111C8764670050C840 /* CoreDataStack.swift */,
 				30B5D4151C8882A10050C840 /* Photo+CoreDataProperties.swift */,
+				30B5D4171C88A3F30050C840 /* TagsViewController.swift */,
+				30B5D4191C88A4620050C840 /* TagDataSource.swift */,
 			);
 			path = Photorama;
 			sourceTree = "<group>";
@@ -246,10 +252,12 @@
 				30F893A31C7CFCD800DDD5CE /* PhotoStore.swift in Sources */,
 				30B5D40E1C8762F50050C840 /* Photo.swift in Sources */,
 				30B5D4031C863B5D0050C840 /* PhotoDataSource.swift in Sources */,
+				30B5D4181C88A3F30050C840 /* TagsViewController.swift in Sources */,
 				30B5D4161C8882A10050C840 /* Photo+CoreDataProperties.swift in Sources */,
 				30B5D4121C8764670050C840 /* CoreDataStack.swift in Sources */,
 				30B5D4051C872A170050C840 /* PhotoCollectionViewCell.swift in Sources */,
 				30B5D4071C872FB20050C840 /* PhotoInfoViewController.swift in Sources */,
+				30B5D41A1C88A4620050C840 /* TagDataSource.swift in Sources */,
 				30F893A11C7CF94800DDD5CE /* FlickerAPI.swift in Sources */,
 				30B5D4141C887B2A0050C840 /* ImageStore.swift in Sources */,
 			);

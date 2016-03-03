@@ -23,6 +23,15 @@ class CoreDataStack {
         return moc
     } ()
     
+    lazy var privateQueueContext: NSManagedObjectContext = {
+        
+        let moc = NSManagedObjectContext(concurrencyType: .PrivateQueueConcurrencyType)
+        moc.parentContext = self.mainQueueContext
+        moc.name = "Primary Private Queue Context"
+        
+        return moc
+    } ()
+    
     private lazy var managedObjectModel: NSManagedObjectModel = {
         
         let modelURL = NSBundle.mainBundle().URLForResource(self.managedObjectModelName, withExtension: "momd")!
@@ -48,6 +57,22 @@ class CoreDataStack {
     
     func saveChanges() throws {
         var error: ErrorType?
+        
+        privateQueueContext.performBlockAndWait { () -> Void in
+            if self.privateQueueContext.hasChanges {
+                do {
+                    try self.privateQueueContext.save()
+                }
+                catch let saveError {
+                    error = saveError
+                }
+            }
+        }
+        
+        if let error = error {
+            throw error
+        }
+    
         mainQueueContext.performBlockAndWait() {
             
             if self.mainQueueContext.hasChanges {
