@@ -8,6 +8,7 @@
 
 import Foundation
 import Freddy
+import CoreData
 
 enum Method: String {
     case RecentPhotos = "flickr.photos.getRecent"
@@ -63,14 +64,40 @@ struct FlickerAPI {
         return components.URL!
     }
     
-    private static func photoFromJSONObject(json: JSON) -> Photo? {
+    private static func photoFromJSONObject(json: JSON, inContext context: NSManagedObjectContext) -> Photo? {
         
-        var photo: Photo? = nil
+        var photo: Photo!
+        
         do {
-            photo = try Photo(json: json)
+            let photoID = try json.string("id"),
+                title = try json.string("title"),
+                photoURLString = try json.string("url_h"),
+                url = NSURL(string: photoURLString),
+                dateString = try json.string("datetaken"),
+                dateTaken = dateFormatter.dateFromString(dateString)
+            
+            let fetchRequest = NSFetchRequest(entityName: "Photo")
+            let predicate = NSPredicate(format: "photoID == \(photoID)")
+            fetchRequest.predicate = predicate
+            
+            var fetchedPhotos: [Photo]!
+            context.performBlockAndWait() {
+                fetchedPhotos = try! context.executeFetchRequest(fetchRequest) as! [Photo]
+            }
+            if fetchedPhotos.count > 0 {
+                return fetchedPhotos.first
+            }
+            
+            context.performBlockAndWait() {
+                photo = NSEntityDescription.insertNewObjectForEntityForName("Photo", inManagedObjectContext: context) as! Photo
+                photo.title = title
+                photo.photoID = photoID
+                photo.remoteURL = url!
+                photo.dateTaken = dateTaken!
+            }
         }
         catch {
-            print("Problem creating Photo")
+            print("Issue parsing JSON")
         }
         
         return photo
@@ -80,7 +107,7 @@ struct FlickerAPI {
         return flickerURL(method: .RecentPhotos, parameters: ["extras": "url_h, date_taken"])
     }
     
-    static func photosFromJSONData(data: NSData) -> PhotosResult {
+    static func photosFromJSONData(data: NSData, inContext context: NSManagedObjectContext) -> PhotosResult {
         do {
             let jsonObject = try JSONParser.createJSONFromData(data)
             
@@ -88,11 +115,23 @@ struct FlickerAPI {
                 return .Failure(FlickrError.InvalidJSONData)
             }
             
-            guard let photosArray: [Photo] = try jsonObject.array("photos", "photo").map(Photo.init) else {
+            guard let photosArray: [JSON] = try jsonObject.array("photos", "photo") else {
                 return .Failure(FlickrError.InvalidJSONData)
             }
             
-            return .Success(photosArray)
+            var finalPhotos = [Photo]()
+            
+            for jsonPhoto in photosArray {
+                if let photo = photoFromJSONObject(jsonPhoto, inContext: context) {
+                    finalPhotos.append(photo)
+                }
+            }
+            
+            if finalPhotos.count == 0 && photosArray.count > 0 {
+                return .Failure(FlickrError.InvalidJSONData)
+            }
+            
+            return .Success(finalPhotos)
         }
         catch let error {
             return .Failure(error)

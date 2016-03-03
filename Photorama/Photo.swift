@@ -2,20 +2,17 @@
 //  Photo.swift
 //  Photorama
 //
-//  Created by Patrick Lind on 2/23/16.
+//  Created by Patrick Lind on 3/2/16.
 //  Copyright © 2016 Pickle Software. All rights reserved.
 //
 
 import UIKit
-import Freddy
+import CoreData
 
-public class Photo: JSONDecodable {
-    
-    var title: String
-    var remoteURL: NSURL?
-    var photoID: String
-    var dateTaken: NSDate?
-    
+class Photo: NSManagedObject {
+
+// Insert code here to add functionality to your managed object subclass
+
     var image: UIImage?
     
     private let dateFormatter: NSDateFormatter = {
@@ -24,36 +21,12 @@ public class Photo: JSONDecodable {
         return formatter
     }()
     
-    init(title: String, photoID: String, remoteURL: NSURL, dateTaken: NSDate) {
-        self.title = title
-        self.photoID = photoID
-        self.remoteURL = remoteURL
-        self.dateTaken = dateTaken
+    override func awakeFromInsert() {
+        title = ""
+        photoID = ""
+        remoteURL = NSURL()
+        photoKey = NSUUID().UUIDString
+        dateTaken = NSDate()
+        timesViewed = 0
     }
-    
-    required public init(json value: JSON) throws {
-        self.title = ""
-        self.photoID = ""
-        remoteURL = nil
-        dateTaken = nil
-        image = nil
-        
-        self.title = try value.string("title")
-        self.photoID = try value.string("id")
-        let dateString = try value.string("datetaken")
-        self.dateTaken = dateFormatter.dateFromString(dateString)
-        do {
-            let url_h = try value.string("url_h")
-            self.remoteURL = NSURL(string: url_h)
-        }
-        catch {
-            remoteURL = nil
-        }
-    }
-}
-
-extension Photo: Equatable {}
-
-public func == (lhs: Photo, rhs: Photo) -> Bool {
-    return lhs.photoID == rhs.photoID
 }

@@ -93,6 +93,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R8k-09-teP">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvw-S3-Edf">
+                                <rect key="frame" x="508" y="72" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Times Viewed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwx-8g-JSY">
+                                <rect key="frame" x="386.5" y="72" width="111.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -100,15 +112,20 @@
                             <constraint firstAttribute="bottom" secondItem="R8k-09-teP" secondAttribute="bottom" id="Mzi-T2-Jik"/>
                             <constraint firstItem="R8k-09-teP" firstAttribute="top" secondItem="1HP-mJ-0aQ" secondAttribute="top" id="XfL-NE-aHT"/>
                             <constraint firstItem="R8k-09-teP" firstAttribute="leading" secondItem="1HP-mJ-0aQ" secondAttribute="leading" id="fYt-vz-I3k"/>
+                            <constraint firstItem="Xvw-S3-Edf" firstAttribute="leading" secondItem="dwx-8g-JSY" secondAttribute="trailing" constant="10" id="lI7-bd-kGa"/>
+                            <constraint firstItem="Xvw-S3-Edf" firstAttribute="top" secondItem="E5R-19-T4K" secondAttribute="bottom" constant="8" id="psJ-OU-ojs"/>
+                            <constraint firstItem="Xvw-S3-Edf" firstAttribute="trailing" secondItem="R8k-09-teP" secondAttribute="trailing" constant="-50" id="vvS-Tx-ZCg"/>
+                            <constraint firstItem="dwx-8g-JSY" firstAttribute="top" secondItem="E5R-19-T4K" secondAttribute="bottom" constant="8" id="yeE-oj-8PA"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="R8k-09-teP" id="Wwc-g4-epy"/>
+                        <outlet property="timesViewed" destination="Xvw-S3-Edf" id="8S6-5S-Y2I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hgd-Sm-d1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1855" y="353"/>
+            <point key="canvasLocation" x="1866" y="376"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="423-Fz-RRb">
