@@ -11,6 +11,21 @@ import UIKit
 class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var segmentedControl: UISegmentedControl!
+    
+    @IBAction func indexChanged(sender: UISegmentedControl) {
+        
+        let segControl = sender as UISegmentedControl
+        switch segControl.selectedSegmentIndex
+        {
+        case 0:
+            retrieveAllPhotos()
+        case 1:
+            retrieveFavoritePhotos()
+        default:
+            break
+        }
+    }
     
     var store: PhotoStore!
     let photoDataSource = PhotoDataSource()
@@ -50,6 +65,27 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
         collectionView.performBatchUpdates(nil, completion: nil)
+    }
+    
+    func retrieveAllPhotos() {
+        let sortByDateTaken = NSSortDescriptor(key: "dateTaken", ascending: true)
+        let photos = try! store.fetchMainQueuePhotos(predicate: nil, sortDescriptors: [sortByDateTaken])
+        
+        NSOperationQueue.mainQueue().addOperationWithBlock() {
+            self.photoDataSource.photos = photos
+            self.collectionView.reloadSections(NSIndexSet (index: 0))
+        }
+    }
+
+    func retrieveFavoritePhotos() {
+        let favPredicate = NSPredicate(format: "favorite == true")
+        let sortByDateTaken = NSSortDescriptor(key: "dateTaken", ascending: true)
+        let photos = try! store.fetchMainQueuePhotos(predicate: favPredicate, sortDescriptors: [sortByDateTaken])
+
+        NSOperationQueue.mainQueue().addOperationWithBlock() {
+            self.photoDataSource.photos = photos
+            self.collectionView.reloadSections(NSIndexSet (index: 0))
+        }
     }
     
     func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
